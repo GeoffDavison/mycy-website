@@ -3,105 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyCy Property Maintenance & Inspection Ltd | Paphos, Cyprus</title>
+    <title>MyCy Property Maintenance | Real-Time Management Paphos</title>
     <style>
-        :root { 
-            --mycy-red: #e74c3c; 
-            --mycy-green: #2d5a27; 
-            --dark: #2c3e50;
-            --light: #f4f7f6;
-        }
-        body { 
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
-            margin: 0; 
-            background-color: var(--light); 
-            color: var(--dark); 
-            line-height: 1.6;
-        }
-        header { 
-            background: #fff; 
-            padding: 30px 20px; 
-            text-align: center; 
-            border-bottom: 5px solid var(--mycy-red);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .logo { max-width: 350px; width: 100%; height: auto; }
+        :root { --mycy-red: #e74c3c; --mycy-green: #2d5a27; --dark: #333; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f9f9f9; color: var(--dark); line-height: 1.6; }
+        header { background: #fff; padding: 20px; text-align: center; border-bottom: 4px solid var(--mycy-red); }
+        .logo { max-width: 280px; width: 100%; height: auto; }
         
-        .hero { 
-            background: linear-gradient(rgba(45, 90, 39, 0.95), rgba(45, 90, 39, 0.95)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white; 
-            padding: 80px 20px; 
-            text-align: center; 
-        }
-        .hero h1 { font-size: 2.8rem; margin: 0; letter-spacing: 1px; text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 20px auto; opacity: 0.9; }
+        .hero { background: var(--mycy-green); color: white; padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
-        .app-section { 
+        .app-highlight { 
             background: #fff; 
-            max-width: 1000px; 
-            margin: -50px auto 40px; 
-            padding: 40px; 
+            border: 2px solid var(--mycy-green); 
             border-radius: 12px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border-left: 8px solid var(--mycy-red);
+            padding: 40px; 
+            max-width: 900px; 
+            margin: -40px auto 40px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .app-content h2 { color: var(--mycy-green); margin-top: 0; font-size: 1.8rem; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { 
-            margin-bottom: 12px; 
-            padding-left: 30px; 
-            position: relative; 
-            font-weight: 500;
-        }
-        .feature-list li::before { 
-            content: '✓'; 
-            position: absolute; 
-            left: 0; 
-            color: var(--mycy-red); 
-            font-weight: bold; 
-            font-size: 1.2rem;
-        }
+        .app-text { flex: 1; min-width: 300px; padding: 20px; }
+        .app-text h2 { color: var(--mycy-green); margin-top: 0; }
+        .app-features { list-style: none; padding: 0; }
+        .app-features li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        .app-features li::before { content: '✓'; position: absolute; left: 0; color: var(--mycy-red); font-weight: bold; }
 
-        .services-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 25px; 
-            padding: 40px 20px; 
-            max-width: 1200px; 
-            margin: auto; 
-        }
-        .card { 
-            background: white; 
-            padding: 35px; 
-            border-radius: 8px; 
-            text-align: center; 
-            transition: 0.3s ease;
-            border: 1px solid #eee;
-        }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--mycy-red); margin-top: 0; font-size: 1.4rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: auto; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--mycy-red); }
 
-        .cta { text-align: center; padding: 60px 20px; background: var(--mycy-green); color: white; }
-        .btn { 
-            background: var(--mycy-red); 
-            color: white; 
-            padding: 18px 40px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            display: inline-block;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .btn:hover { background: #c0392b; transform: scale(1.05); }
-
-        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 40px 20px; }
-        .contact-details { margin-bottom: 20px; opacity: 0.8; }
+        .cta { text-align: center; padding: 50px 20px; background: #eee; }
+        .btn { background: var(--mycy-red); color: white; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 30px; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA8AAAALQCAYAAAB8W9p1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAgAElEQVR4nOzdeXhU5b0///vMMpMZshNCAiEJkH0RFREFF8SqVavVurXWatXat26t1v7aWvvW2tq2trWttW7V6q3iW63ValVRXBAR9032LQmE7JNkMst8f3+M8P4++7E6GZmc9XNdXAnJnJnknCtz5nm+z/dzK8uyLAAAAAAAAD4qL+8BAAAAAAAAHwkCHAAAAAAAQIMIcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0IcAAAAAAAQA0
+    <img src="PASTE_BASE64_HERE" alt="MyCy Logo" class="logo">
+</header>
+
+<section class="hero">
+    <h1>Smart Property Management in Paphos</h1>
+    <p>We don't just watch your home. We give you the keys to monitor it from anywhere in the world.</p>
+</section>
+
+<div class="container">
+    <div class="app-highlight">
+        <div class="app-text">
+            <h2>The MyCy Difference: Total Transparency</h2>
+            <p>We are the only team in Paphos offering a <strong>Real-Time Owner Portal</strong>. No more waiting for monthly reports—see exactly what is happening at your property, as it happens.</p>
+            <ul class="app-features">
+                <li><strong>Live Task Updates:</strong> Get notified the moment cleaning or maintenance is finished.</li>
+                <li><strong>Instant Meter Readings:</strong> Track electricity and water usage in real-time.</li>
+                <li><strong>Visual Proof:</strong> High-res photos and videos uploaded after every visit.</li>
+                <li><strong>All-in-One Dashboard:</strong> Security logs, gardening, and pool status in one place.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Airbnb & Holiday</h3>
+            <p>5-star standard turnovers, professional laundry, and seamless guest check-ins.</p>
+        </div>
+        <div class="card">
+            <h3>Pool & Garden</h3>
+            <p>Precision pool chemistry and landscaping to keep your curb appeal high year-round.</p>
+        </div>
+        <div class="card">
+            <h3>Technical Support</h3>
+            <p>Our app technology ensures you never have to guess about maintenance needs again.</p>
+        </div>
+        <div class="card">
+            <h3>Security & Health</h3>
+            <p>Regular inspections for humidity, security breaches, and general property health.</p>
+        </div>
+    </div>
+</div>
+
+<section class="cta">
+    <h2>Ready for Peace of Mind?</h2>
+    <p>Contact us today to see a demo of our Owner App.</p><br>
+    <a href="mailto:info@mycyproperty.com" class="btn">Enquire Now</a>
+</section>
+
+<footer>
+    <p><strong>MyCy Property Maintenance & Inspection Ltd</strong></p>
+    <p>Paphos, Cyprus | Serving Peyia, Tala, Chloraka & Beyond</p>
+    <p>&copy; 2024 MyCy Ltd. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
